@@ -71,7 +71,7 @@ func (rs *recordSet) remaining(now time.Time) int {
 	if d < 0 {
 		return 0
 	}
-	return int((d + time.Second - 1) / time.Second)
+	return int(d / time.Second)
 }
 
 // negativeEntry is a cached NXDOMAIN response with its own TTL.
